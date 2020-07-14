@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harini</title>
+
+</head>
+<body>
+    <script>
+        var myDate = new Date();
+        var myDay = myDate.getDay();
+        var daysname = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+        document.write("Today is:"+ daysname[myDay]);
+        document.write("<br/>");
+        var hours=myDate.getHours();
+        var amorpm = hours>=12 ? 'PM':'AM';
+        hours=hours%12; 
+        hours = hours?hours:12;
+        var minutes = myDate.getMinutes();
+        minutes = minutes<10?'0'+ minutes:minutes;
+        var myTime = hours + " " + amorpm +":" + minutes + ":" + myDate.getMilliseconds();
+        document.write("\tCurrent time is: " + myTime);
+    </script>
+    
+</body>
+</html>
